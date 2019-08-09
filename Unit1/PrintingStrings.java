@@ -25,6 +25,6 @@ public class PrintingStrings
         myname = "Solomon";
         
         String error;
-        
+        error = "there's nothing to change";
     }
 }
