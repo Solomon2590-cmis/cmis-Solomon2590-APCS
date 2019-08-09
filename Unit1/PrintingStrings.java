@@ -26,5 +26,8 @@ public class PrintingStrings
         
         String error;
         error = "there's nothing to change";
+        
+        Integer itisinteger = new Integer(2590);
+        System.out.print(itisinteger);
     }
 }
