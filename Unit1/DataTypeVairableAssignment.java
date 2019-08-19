@@ -64,4 +64,40 @@ public class DataTypeVairableAssignment
         char c = 0b11111111;
         System.out.println(c);
     }
+    public static void typeTest(){
+         //integer
+         Scanner input = new Scanner(System.in);
+         int sInteger1 = input.nextInt();
+         int sInteger2 = input.nextInt();
+         int addInteger = 1+2;
+         int differentInteger = 2-1;
+         int productInteger = 2*2;
+         int quotientInteger = 1/2;
+         System.out.format("Scanner1: %d\nScanner2: %d\nSum: %d\nDifference: %d\nProduct: %d\nQuotient:%d\n",sInteger1,sInteger2,addInteger,differentInteger,productInteger,quotientInteger);
+         
+         //double
+         double sDouble1 = input.nextDouble();
+         double sDouble2 = input.nextDouble();
+         double addDouble = 1d + 2d;
+         double differentDouble = 2d - 1d;
+         double productDouble = 2d*2d;
+         double quotientDouble = 1d/2d;
+         System.out.format("Scanner1: %1.2f\nScanner2: %f\nSum: %f\nDifference: %f\nProduct: %f\nQuotient:%f\n",sDouble1,sDouble2,addDouble,differentDouble,productDouble,quotientDouble);
+         
+         //Scanner Double
+         double ssDouble1 = input.nextDouble();
+         double ssDouble2 = input.nextDouble();
+         //int sumDouble12 = ssDouble1 + ssDouble2; Cannot convert double to int
+         //int differenceDouble12 = ssDouble1 - ssDouble2; Cannot conver double to int
+         //int productDouble12 = ssDouble1 * ssDouble2; Cannot convert double to int
+         //int quotientDouble12 = ssDouble1/ssDouble2; Cannot convert double to int
+         
+         //Can convert int to double
+         
+         //Scanner int
+         int inputInt = input.nextInt();
+         int inputInt2 = input.nextInt();
+         
+    }
 }
+
