@@ -97,7 +97,30 @@ public class DataTypeVairableAssignment
          //Scanner int
          int inputInt = input.nextInt();
          int inputInt2 = input.nextInt();
+         int sumInt = inputInt + inputInt2;
+         int differenceInt = inputInt - inputInt2;
+         int productInt = inputInt * inputInt2;
+         int quotientInt = inputInt / inputInt2;
+         System.out.format("Operand1: %d\nOperand2: %d\nSum: %d\nDifference: %d\n Product: %d\nQuotient: %d\n",sumInt,differenceInt,productInt,quotientInt);
+         
+         //Scanner int double
+         //int inputInt3 = input.nextInt();
+         //double inputDouble = input.nextDouble();
+         //Cannot put Double in Int
+         //int sumIntDouble = inputInt3 + inputDouble;
+         //int differenceIntDouble = inputInt3 - inputDouble;
+         //int productIntDouble = inputInt3 * inputDouble;
+         //int quotientIntDouble = inputInt3 / inputDouble;
+         //System.out.format("Operand1: %d\nOperand2: %d\nSum: %d\nDifference: %d\n Product: %d\nQuotient: %d\n",sumIntDouble,differenceIntDouble,productIntDouble,quotientIntDouble);
+         
+         //Scanner Double int
+         int inputInt3 = input.nextInt();
+         double inputDouble = input.nextDouble();
+         double sumIntDouble = inputInt3 + inputDouble;
+         double differenceIntDouble = inputInt3 - inputDouble;
+         double productIntDouble = inputInt3 * inputDouble;
+         double quotientIntDouble = inputInt3 / inputDouble;
+         System.out.format("Operand1: %d\nOperand2: %d\nSum: %d\nDifference: %d\n Product: %d\nQuotient: %d\n",sumIntDouble,differenceIntDouble,productIntDouble,quotientIntDouble);
          
     }
 }
-

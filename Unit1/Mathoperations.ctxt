@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Mathoperations
+comment0.text=\n\ Write\ a\ description\ of\ class\ MathOperations\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=a\ b\ c
+comment1.target=int\ sum(int,\ int,\ int)
+comment2.params=a\ b\ c
+comment2.target=double\ avg(double,\ double,\ double)
+comment3.params=diameter\ height
+comment3.target=double\ volumeCylinder(double,\ double)
+numComments=4
