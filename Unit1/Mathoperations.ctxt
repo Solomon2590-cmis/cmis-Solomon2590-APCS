@@ -7,4 +7,6 @@ comment2.params=a\ b\ c
 comment2.target=double\ avg(double,\ double,\ double)
 comment3.params=diameter\ height
 comment3.target=double\ volumeCylinder(double,\ double)
-numComments=4
+comment4.params=inAngle
+comment4.target=int\ numberOfSides(int)
+numComments=5

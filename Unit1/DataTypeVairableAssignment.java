@@ -82,7 +82,7 @@ public class DataTypeVairableAssignment
          double differentDouble = 2d - 1d;
          double productDouble = 2d*2d;
          double quotientDouble = 1d/2d;
-         System.out.format("Scanner1: %1.2f\nScanner2: %f\nSum: %f\nDifference: %f\nProduct: %f\nQuotient:%f\n",sDouble1,sDouble2,addDouble,differentDouble,productDouble,quotientDouble);
+         System.out.format("Scanner1: %1.0f\nScanner2: %f\nSum: %f\nDifference: %f\nProduct: %f\nQuotient:%f\n",sDouble1,sDouble2,addDouble,differentDouble,productDouble,quotientDouble);
          
          //Scanner Double
          double ssDouble1 = input.nextDouble();

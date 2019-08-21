@@ -16,4 +16,8 @@ public class Mathoperations
     public static double volumeCylinder(double diameter, double height){
         return Math.PI*Math.pow(diameter/2,2)*height; 
     }
+    public static int numberOfSides(int inAngle){
+        int negativeAngle = inAngle * -1;
+        return 360/(negativeAngle+180); 
+    }
 }
