@@ -18,6 +18,22 @@ public class Mathoperations
     }
     public static int numberOfSides(int inAngle){
         int negativeAngle = inAngle * -1;
-        return 360/(negativeAngle+180); 
+        return 360/(negativeAngle+180);
+    }
+    public static int interestingNumb(int x, int y){
+        int originalx = x;
+        int originaly = y;
+        x*=3;
+        y*=3;
+        x+=9;
+        y+=9;
+        x/=3;
+        y/=3;
+        x-=originalx;
+        y-=originaly;
+        return (x+y)*4; 
+    }
+    public static double surfaceAreaClyinder(double radius, double height){
+        return (2*Math.PI*radius*height)+(2*Math.PI*Math.pow(radius,2));
     }
 }
