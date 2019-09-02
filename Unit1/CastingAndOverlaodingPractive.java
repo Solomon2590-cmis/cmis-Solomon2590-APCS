@@ -32,16 +32,15 @@ public class CastingAndOverlaodingPractive
 }
     public static int minToMax(int min, int max){
         double rand = Math.random();
-        double multimini = rand * min;
-        double multimax = rand * max;
-        int mini = (int)multimini;
-        int maxi = (int)multimax;
-        return maxi-mini;
+        int mini = (max+min)/2;
+        double re = (mini+min)*rand;
+        int ree = (int)re;
+        return ree;
 }
     public static double minToMax(double min, double max){
         double rand = Math.random();
-        double difference = max-min;
-        double re = rand * difference; 
+        double mini = (max+min)/2;
+        double re = (mini+min)*rand;
         return re;
 }
 }
