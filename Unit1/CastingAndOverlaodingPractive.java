@@ -2,16 +2,10 @@
 public class CastingAndOverlaodingPractive
 {
     public static int oneOrZero(){
-        double rand = Math.random(); 
-        double mutirand = rand*2;
-        int re = (int)mutirand; 
-        return re; 
+        return (int)(Math.random()*2); 
 }
     public static int zeroTo99(){
-        double rand = Math.random();
-        double multi = rand*100;
-        int re = (int)multi;
-        return re;
+        return (int)(Math.random()*100);
 }
 //    public static double zeroTo99(){
 //      double rand = Math.random();
@@ -20,27 +14,15 @@ public class CastingAndOverlaodingPractive
 //}
 // cannot have same method but with same parameter
     public static int zeroToN(int n){
-        double rand = Math.random();
-        double multi = rand*n;
-        int re = (int)multi;
-        return re;
+        return (int)(Math.random()*n);
 }
     public static double zeroToN(double n){
-        double rand = Math.random();
-        double multi = rand*n;
-        return multi; 
+        return Math.random()*n; 
 }
     public static int minToMax(int min, int max){
-        double rand = Math.random();
-        int mini = (max+min)/2;
-        double re = (mini+min)*rand;
-        int ree = (int)re;
-        return ree;
+        return (int)((max-min)+min*Math.random());
 }
     public static double minToMax(double min, double max){
-        double rand = Math.random();
-        double mini = (max+min)/2;
-        double re = (mini+min)*rand;
-        return re;
+        return (max-min)+min*Math.random();
 }
 }
