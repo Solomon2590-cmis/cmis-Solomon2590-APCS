@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ClassesInstancesObjects
+comment1.params=
+comment1.target=java.lang.String\ binMaxInt()
+comment2.params=i
+comment2.target=java.lang.String\ binDiffMax(java.lang.Integer)
+comment3.params=a\ b
+comment3.target=java.lang.String\ mutant(java.lang.String,\ java.lang.String)
+numComments=4
