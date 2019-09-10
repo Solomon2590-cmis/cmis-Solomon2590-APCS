@@ -6,4 +6,6 @@ comment2.params=i
 comment2.target=java.lang.String\ binDiffMax(java.lang.Integer)
 comment3.params=a\ b
 comment3.target=java.lang.String\ mutant(java.lang.String,\ java.lang.String)
-numComments=4
+comment4.params=a\ b\ c
+comment4.target=java.lang.String\ triMutant(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=5

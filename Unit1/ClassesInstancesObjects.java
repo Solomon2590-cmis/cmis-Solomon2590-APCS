@@ -13,5 +13,23 @@ public static String mutant(String a, String b){;
     String secondhalfstr = b.substring(halflengthb);
     return firsthalfstr + secondhalfstr;
 }
-public static String triMutant(String a, String b, String c)
+public static String triMutant(String a, String b, String c){
+    int onethird1 = a.length()/3;
+    int onethird2 = b.length()/3;
+    int onethird3 = c.length()/3;
+    String firstThird = a.substring(0,onethird1);
+    String secondThird = b.substring(onethird2,onethird2*2);
+    String thirdThird = c.substring(onethird3,onethird3*2);
+    return firstThird + secondThird + thirdThird;
+}
+public static int indexOf2nd(String haystack, String needle){
+    Integer firstOccurrence = new Integer(haystack.indexOf(needle));
+    Integer secondOccurrence = new Integer(haystack.indexOf(needle, firstOccurrence + 1));
+    return secondOccurrence;
+}
+public static int indexOf2ndLast(String haystack, String needle){
+    Integer lastOccurrence = new Integer(haystack.lastIndexOf(needle));
+    Integer secondLast = new Integer(haystack.lastIndexOf(needle, lastOccurrence - 1));
+    return secondLast;
+}
 }
