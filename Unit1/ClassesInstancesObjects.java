@@ -32,4 +32,16 @@ public static int indexOf2ndLast(String haystack, String needle){
     Integer secondLast = new Integer(haystack.lastIndexOf(needle, lastOccurrence - 1));
     return secondLast;
 }
+public static boolean reduplication(String word){
+    int longString = word.length()/2;
+    String firsthalf = word.substring(0,longString);
+    return firsthalf.equals(word.substring(longString));
+}
+public static boolean binContains(Integer i, String p){
+    return (Integer.toBinaryString(i)).contains(p);
+}
+public static boolean isPalidrome(Integer i){
+    String quence = Integer.toBinaryString(i);
+    int half = 
+}
 }
