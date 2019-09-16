@@ -41,7 +41,9 @@ public static boolean binContains(Integer i, String p){
     return (Integer.toBinaryString(i)).contains(p);
 }
 public static boolean isPalidrome(Integer i){
-    String quence = Integer.toBinaryString(i);
-    int half = 
+    String x = Integer.toBinaryString(i); 
+    int y = x.parseInt();
+    return x.equals(y.reverse()); 
+    //use reverse. integer
 }
 }
