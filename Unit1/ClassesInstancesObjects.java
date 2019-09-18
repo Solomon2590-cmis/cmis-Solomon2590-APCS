@@ -40,10 +40,11 @@ public static boolean reduplication(String word){
 public static boolean binContains(Integer i, String p){
     return (Integer.toBinaryString(i)).contains(p);
 }
-public static void isPalidrome(Integer i){
-    String x = Integer.toBinaryString(i); 
-    //int y = x.parseInt();
-    //return x.equals(y.reverse()); 
-    //use reverse. integer
+public static boolean isPalidrome(Integer i){
+    int bit = Integer.reverse(i);
+    return i.equals(bit);
+}
+public static boolean isAnagram(Integer a, Integer b){
+    String 
 }
 }
