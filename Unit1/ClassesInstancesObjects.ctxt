@@ -17,5 +17,5 @@ comment7.target=boolean\ reduplication(java.lang.String)
 comment8.params=i\ p
 comment8.target=boolean\ binContains(java.lang.Integer,\ java.lang.String)
 comment9.params=i
-comment9.target=boolean\ isPalidrome(java.lang.Integer)
+comment9.target=void\ isPalidrome(java.lang.Integer)
 numComments=10
