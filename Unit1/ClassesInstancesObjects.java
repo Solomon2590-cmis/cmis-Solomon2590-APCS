@@ -45,6 +45,26 @@ public static boolean isPalidrome(Integer i){
     return i.equals(bit);
 }
 public static boolean isAnagram(Integer a, Integer b){
-    String 
+    int aOnes = Integer.bitCount(a);
+    int bOnes = Integer.bitCount(b);
+    String aOnesString = Integer.toString(aOnes);
+    String bOnesString = Integer.toString(bOnes);
+    return aOnesString.equals(bOnesString);
+}
+public static boolean cubeContainsSelf(Integer i){
+    int cube = i*i*i;
+    String re = Integer.toString(cube);
+    String rex = Integer.toString(i);
+    return re.contains(rex);
+}
+public static Double maxValue(Double a, Double b, Double c, Double d){
+    double re;
+    double rex;
+    re = Math.max(a,b);
+    rex = Math.max(c,d);
+    return Math.max(re,rex);
+}
+public static Integer middleValue(Integer a, Integer b, Integer c){
+    
 }
 }
