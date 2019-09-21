@@ -26,7 +26,7 @@ public class DataTypeVairableAssignment
         long longg = 123123L;
         short shortt = 234;
         float floatt = 1.123f;
-        double doublee = 1.12312321234d;
+        double doublee = 1111111111.12312321234d;
         char character = '\ufead';
         boolean booleen = true; 
         String string = null;
@@ -37,9 +37,9 @@ public class DataTypeVairableAssignment
         double doublea; 
         
         //Scanner for all
-        boolean booleanScanner = input.nextBoolean();
-        int integerScanner = input.nextInt();
-        double doubleScanner = input.nextDouble();
+        //boolean booleanScanner = input.nextBoolean();
+        //int integerScanner = input.nextInt();
+        //double doubleScanner = input.nextDouble();
        
         //Print out primitive data 
         System.out.println(bite);
@@ -53,9 +53,7 @@ public class DataTypeVairableAssignment
         System.out.println(string);
         
         //Using format to print AP data
-        System.out.format(
-        "I am an integer:%d\nI am a double:%f\nI am a boolean:%b",
-        integer,
+        System.out.format("I am a double:%.36f\nI am a boolean:%b",
         doublee,
         booleen);
         
@@ -73,7 +71,6 @@ public class DataTypeVairableAssignment
          int differentInteger = 2-1;
          int productInteger = 2*2;
          int quotientInteger = 1/2;
-         System.out.format("Scanner1: %d\nScanner2: %d\nSum: %d\nDifference: %d\nProduct: %d\nQuotient:%d\n",sInteger1,sInteger2,addInteger,differentInteger,productInteger,quotientInteger);
          
          //double
          double sDouble1 = input.nextDouble();
@@ -82,7 +79,6 @@ public class DataTypeVairableAssignment
          double differentDouble = 2d - 1d;
          double productDouble = 2d*2d;
          double quotientDouble = 1d/2d;
-         System.out.format("Scanner1: %1.0f\nScanner2: %f\nSum: %f\nDifference: %f\nProduct: %f\nQuotient:%f\n",sDouble1,sDouble2,addDouble,differentDouble,productDouble,quotientDouble);
          
          //Scanner Double
          double ssDouble1 = input.nextDouble();
@@ -101,7 +97,7 @@ public class DataTypeVairableAssignment
          int differenceInt = inputInt - inputInt2;
          int productInt = inputInt * inputInt2;
          int quotientInt = inputInt / inputInt2;
-         System.out.format("Operand1: %d\nOperand2: %d\nSum: %d\nDifference: %d\n Product: %d\nQuotient: %d\n",sumInt,differenceInt,productInt,quotientInt);
+         System.out.format("Operand1: %d\nOperand2: %d\nSum: %d\nDifference: %d\n",sumInt,differenceInt,productInt,quotientInt);
          
          //Scanner int double
          //int inputInt3 = input.nextInt();
@@ -120,7 +116,6 @@ public class DataTypeVairableAssignment
          double differenceIntDouble = inputInt3 - inputDouble;
          double productIntDouble = inputInt3 * inputDouble;
          double quotientIntDouble = inputInt3 / inputDouble;
-         System.out.format("Operand1: %d\nOperand2: %d\nSum: %d\nDifference: %d\n Product: %d\nQuotient: %d\n",sumIntDouble,differenceIntDouble,productIntDouble,quotientIntDouble);
          
     }
 }
