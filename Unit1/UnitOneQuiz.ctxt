@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=UnitOneQuiz
+comment1.params=a\ b
+comment1.target=int\ sumOfSqaures(int,\ int)
+comment2.params=a\ b
+comment2.target=double\ squareOfSum(double,\ double)
+comment3.params=a\ b\ c
+comment3.target=double\ avg(int,\ int,\ int)
+comment4.params=a\ b\ c
+comment4.target=double\ avgOfCubes(double,\ double,\ double)
+comment5.params=a\ b\ c
+comment5.target=double\ cubeOfAvg(int,\ int,\ double)
+comment6.params=a\ b\ c
+comment6.target=int\ sum(double,\ double,\ double)
+numComments=7
