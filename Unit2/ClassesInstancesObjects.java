@@ -65,6 +65,6 @@ public static Double maxValue(Double a, Double b, Double c, Double d){
     return Math.max(re,rex);
 }
 public static Integer middleValue(Integer a, Integer b, Integer c){
-    return 
+    return (a+b+c) - Math.min(Math.min(a,b),c) - Math.max(Math.max(a,b),c);
 }
 }
