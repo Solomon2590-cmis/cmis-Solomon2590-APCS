@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Square
+comment1.params=sideLength\ color\ realOrFake
+comment1.target=Square(int,\ java.lang.String,\ boolean)
+comment10.params=
+comment10.target=double\ getArea()
+comment11.params=newArea
+comment11.target=void\ setArea(double)
+comment2.params=color
+comment2.target=Square(java.lang.String)
+comment3.params=sideLength
+comment3.target=Square(int)
+comment4.params=
+comment4.target=double\ getSideLength()
+comment5.params=newSideLength
+comment5.target=void\ setSideLength(int)
+comment6.params=
+comment6.target=java.lang.String\ getColor()
+comment7.params=newColor
+comment7.target=void\ setColor(java.lang.String)
+comment8.params=
+comment8.target=boolean\ getRealOrFake()
+comment9.params=newRealOrFake
+comment9.target=void\ setRealOrFake(boolean)
+numComments=12
