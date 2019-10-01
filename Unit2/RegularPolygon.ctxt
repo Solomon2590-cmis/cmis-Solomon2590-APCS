@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=RegularPolygon
+comment1.params=nSides\ sideLength
+comment1.target=RegularPolygon(int,\ double)
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment11.params=agrv
+comment11.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=int\ getNSides()
+comment3.params=newNSides
+comment3.target=void\ setNSides(int)
+comment4.params=
+comment4.target=double\ getSideLength()
+comment5.params=newSideLength
+comment5.target=void\ setSideLength(double)
+comment6.params=
+comment6.target=double\ getPerimeter()
+comment7.params=newPerimeter
+comment7.target=void\ setPerimeter(double)
+comment8.params=
+comment8.target=double\ getRadius()
+comment9.params=newRadius
+comment9.target=double\ setRadius(double)
+numComments=12
