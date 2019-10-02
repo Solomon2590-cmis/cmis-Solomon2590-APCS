@@ -36,9 +36,25 @@ public class RegularPolygon{
         return sideLength/(2*Math.sin(R/nSides));
     }
     
-    public double setRadius(double newRadius){
+    public void setRadius(double newRadius){
         double R = Math.toRadians(180);
-        return newRadius*(2*Math.sin(R/nSides)); 
+        sideLength = newRadius*(2*Math.sin(R/nSides)); 
+    }
+    
+    public double getApothem(){
+        double r = Math.toRadians(180);
+        return this.sideLength/(2*Math.tan(r/this.nSides));
+    }
+    
+    public double getArea(){
+        return (getApothem()*getPerimeter())/2;
+    }
+    
+    public void changeArea(double pct){
+        double area;
+        area = getArea()*pct;
+        double newApo = getApothem()*pct;
+        this.sideLength = ((area*(2*pct)*newApo)/nSides);
     }
     
     public String toString(){
@@ -48,6 +64,5 @@ public class RegularPolygon{
     public static void main(String[] agrv){
         RegularPolygon test1 = new RegularPolygon(5,10);
         System.out.println(test1.getRadius());
-        System.out.println(test1.setRadius(8.5));
     }
 }
