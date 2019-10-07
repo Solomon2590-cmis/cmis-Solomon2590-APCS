@@ -57,6 +57,38 @@ public class RegularPolygon{
         this.sideLength = ((area*(2*pct)*newApo)/nSides);
     }
     
+    public double getLongestBisector(){
+        int evenOrOdd = nSides%2;
+        double radius1 = getRadius();
+        double radiusOrApothem;
+        radiusOrApothem = evenOrOdd * getApothem();
+        evenOrOdd -= 1;
+        radiusOrApothem += -1*(evenOrOdd * radius1);
+        return radius1 + radiusOrApothem; 
+    }
+    
+    public double getShortestBisector(){
+        int evenOrOdd = nSides%2;
+        double apothem1 = getApothem();
+        double radiusOrApothem;
+        radiusOrApothem = evenOrOdd * getRadius();
+        evenOrOdd -=1;
+        radiusOrApothem += -1*(evenOrOdd * getApothem());
+        return apothem1 + radiusOrApothem; 
+    }
+    
+    public int fitsIn(RegularPolygon other){
+        double radi = other.getRadius();
+        double apothem = getApothem();
+        int multi = (Double.compare(apothem,radi))+1;
+        return multi * 1; 
+    }
+    
+    public void inscribe(RegularPolygon other){
+        double otherApothem = other.getApothem();
+        setRadius(otherApothem);
+    }
+    
     public String toString(){
         return "hi";
     }
