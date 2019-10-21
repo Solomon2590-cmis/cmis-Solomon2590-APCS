@@ -39,47 +39,14 @@ public class Moses extends Robot
      * <li>getOldY()<li>
      * </ul>
      */
+    
     public void behave(){
-        if (getOldY() == getY()-1 || getOldY() == getY()+1){
-            if (isClearUp() == true){
-                up();
-                if (isClearUp() == false){
-                down();
-                down();
-                down();
-                }
-                right();
-            }
-            else if (isClearDown() == true){
-                down();
-                down();
-                right();
-            }
-        }
-        else if (isStuck() == true){
-            left();
-            if (isClearUp() == true){
-                up();
-                up();
-                right();
-            }
-            else if (isClearDown() == true){
-                down();
-                down();
-                right();
-            }
-        }
-        else if (isClearRight() == true){
+       setData(0,getX());
+       setData(1,getY());
+        if (isClearRight() == true){
             right();
         }
-        else if (isClearUp() == true){
-            up();
-            right();
-        }
-        else if (isClearDown()){
-            down();
-            right();
-        }
-     
+        else if (Greenfot.getRandomNumber(2) = 1)
+
     }
 }
