@@ -41,12 +41,31 @@ public class Moses extends Robot
      */
     
     public void behave(){
-       setData(0,getX());
-       setData(1,getY());
-        if (isClearRight() == true){
+
+       setData(9,1); 
+       setData(8,getData(6));
+       setData(7,getData(5));
+       setData(6,getData(4));
+       setData(5,getData(3));
+       setData(4,getData(2));
+       setData(3,getData(1));
+       setData(2,getData(0));
+       
+       if (isClearRight() == true){
             right();
         }
-        else if (Greenfot.getRandomNumber(2) = 1)
+       int backward = 1;
+       if (isClearRight() == false){
+            if (Greenfoot.getRandomNumber(3) == 0)
+                up();
+            else if (Greenfoot.getRandomNumber(3) == 1 )
+                down();
+            else if (Greenfoot.getRandomNumber(3) >= 2)
+                left();
+        }
+       
+       setData(1,getY());
+       setData(0,getX());
 
-    }
+}
 }
