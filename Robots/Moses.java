@@ -41,31 +41,53 @@ public class Moses extends Robot
      */
     
     public void behave(){
-
-       setData(9,1); 
-       setData(8,getData(6));
-       setData(7,getData(5));
-       setData(6,getData(4));
-       setData(5,getData(3));
-       setData(4,getData(2));
-       setData(3,getData(1));
-       setData(2,getData(0));
+       setData(3,0);
+       setData(2,0);
+       setData(1,0);
+       setData(0,0);
+       int x = getData(0);
+       int y = getData(1);
        
-       if (isClearRight() == true){
+         
+    if (isClearRight() == false && isClearUp() == false && isClearDown() == false){
+           setData(2,getX());
+           setData(3,getY()); 
+          }
+          
+    if (getX() == getData(2) && getY() == getData(3)){
+        setData(1,getData(1)+2);
+    }
+    
+    if (getX() > getData(2)){
+        setData(0,0);
+        setData(1,0); 
+    }
+    
+    if (x < y){
+            if (Greenfoot.getRandomNumber(3) == 0){
+                up();
+            }
+            else if (Greenfoot.getRandomNumber(3) == 1 ){
+                down();
+            }
+            else if (Greenfoot.getRandomNumber(3) >= 2){
+                left();
+            }
+            int num = getData(0)+1; 
+            setData(0,num); 
+            }
+            
+    if (isClearRight() == true){
             right();
         }
-       int backward = 1;
-       if (isClearRight() == false){
-            if (Greenfoot.getRandomNumber(3) == 0)
-                up();
-            else if (Greenfoot.getRandomNumber(3) == 1 )
-                down();
-            else if (Greenfoot.getRandomNumber(3) >= 2)
-                left();
-        }
        
-       setData(1,getY());
-       setData(0,getX());
+    if (!isClearRight() == true && (isClearUp() == true || isClearDown() == true)){
+        if (Greenfoot.getRandomNumber(2) == 1){
+               up();
+        }
+        else if (Greenfoot.getRandomNumber(2) == 2){
+            down(); 
+        }}
+      }
 
-}
 }
