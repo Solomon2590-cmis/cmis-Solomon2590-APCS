@@ -24,15 +24,15 @@ comment5.params=v\ a\ b
 comment5.target=boolean\ isMultipleOf(int,\ int,\ int)
 comment5.text=\n\ return\ true\ if\ v\ is\ a\ multiple\ of\ both\ a\ and\ b\n
 comment6.params=s1\ s2\ s3
-comment6.target=boolean\ isIsoscelese(int,\ int,\ int)
-comment6.text=\n\ return\ true\ if\ s1,\ s2,\ and\ s3\ could\ possibly\ represent\ the\ lengths\ of\ the\ sides\ of\ an\ isoscelese\ triangle.\n
+comment6.target=boolean\ isTriangle(int,\ int,\ int)
+comment6.text=\n\ return\ true\ if\ s1,\ s2,\ and\ s3\ represent\ the\ length\ of\ the\ sides\ of\ a\ triangle.\n
 comment7.params=s1\ s2\ s3
-comment7.target=boolean\ isEqualateral(int,\ int,\ int)
-comment7.text=\n\ Return\ true\ if\ s1,\ s1,\ and\ s3\ could\ represent\ the\ lengths\ of\ the\ sides\ of\ an\ equalateral\ triangle.\n
-comment8.params=q\ x\ c
-comment8.target=boolean\ isPythTrip(int,\ int,\ int)
-comment8.text=\n\ Return\ true\ if\ q,\ x,\ and\ c\ are\ a\ valid\ pythagorean\ triple\ (i.e.\ a^2\ +\ b^2\ \=\ c^2)\n\ Any\ combination\ of\ the\ three\ can\ make\ it\ valid,\ not\ necessarily\ in\ the\ order\ given.\n
-comment9.params=s1\ s2\ s3
-comment9.target=boolean\ isTriangle(int,\ int,\ int)
-comment9.text=\n\ return\ true\ if\ s1,\ s2,\ and\ s3\ represent\ the\ length\ of\ the\ sides\ of\ a\ triangle.\n
+comment7.target=boolean\ isIsoscelese(int,\ int,\ int)
+comment7.text=\n\ return\ true\ if\ s1,\ s2,\ and\ s3\ could\ possibly\ represent\ the\ lengths\ of\ the\ sides\ of\ an\ isoscelese\ triangle.\n
+comment8.params=s1\ s2\ s3
+comment8.target=boolean\ isEqualateral(int,\ int,\ int)
+comment8.text=\n\ Return\ true\ if\ s1,\ s1,\ and\ s3\ could\ represent\ the\ lengths\ of\ the\ sides\ of\ an\ equalateral\ triangle.\n
+comment9.params=q\ x\ c
+comment9.target=boolean\ isPythTrip(int,\ int,\ int)
+comment9.text=\n\ Return\ true\ if\ q,\ x,\ and\ c\ are\ a\ valid\ pythagorean\ triple\ (i.e.\ a^2\ +\ b^2\ \=\ c^2)\n\ Any\ combination\ of\ the\ three\ can\ make\ it\ valid,\ not\ necessarily\ in\ the\ order\ given.\n
 numComments=13

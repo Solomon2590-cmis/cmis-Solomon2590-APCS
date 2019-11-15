@@ -63,13 +63,31 @@
     }
     
     /**
+     * return true if s1, s2, and s3 represent the length of the sides of a triangle.
+     */
+    public static boolean isTriangle(int s1, int s2, int s3){
+        int max = Math.max(Math.max(s1,s2), s3);
+        int min = Math.min(Math.min(s1,s2), s3);
+        int mid = (s1 + s2 + s3)- max -min;
+        if (mid + min >= max){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    /**
      * return true if s1, s2, and s3 could possibly represent the lengths of the sides of an isoscelese triangle.
      */
     public static boolean isIsoscelese(int s1, int s2, int s3){
-        if (s1 == s2 || s2 == s3 || s1 == s3){
+        int max = Math.max(Math.max(s1,s2), s3);
+        int min = Math.min(Math.min(s1,s2), s3);
+        int mid = (s1 + s2 + s3)- max -min;
+        if (mid + min >= max){
             return true;
         }
-        else {
+        else{
             return false;
         }
     }
@@ -78,7 +96,15 @@
      * Return true if s1, s1, and s3 could represent the lengths of the sides of an equalateral triangle.
      */
     public static boolean isEqualateral(int s1, int s2, int s3){
-        return false;
+        if (s1 <= 0 || s2 <= 0 || s3<= 0){
+            return false;
+        }
+        else if ( (s1 == s2) && (s1 == s3)){
+            return true;
+        }
+        else {
+            return false; 
+        }
     }
     
     /**
@@ -86,21 +112,30 @@
      * Any combination of the three can make it valid, not necessarily in the order given.
      */
     public static boolean isPythTrip(int q, int x, int c){
-        return false;
+        int max = Math.max(Math.max(q,x), c);
+        int min = Math.min(Math.min(q,x), c);
+        int mid = (q + x + c)- max -min;
+        if (Math.pow(min,2)+Math.pow(mid,2) == Math.pow(max,2)){
+            return true; 
+        }   
+        else {
+            return false; 
+        }
     }
     
-    /**
-     * return true if s1, s2, and s3 represent the length of the sides of a triangle.
-     */
-    public static boolean isTriangle(int s1, int s2, int s3){
-        int max = Math.max(Math.mx
-    }
     
     /**
      * return true if word begins and ends with ps
      */
     public static boolean isPrefixAndSuffix(String ps, String word){
-        return false;
+        int first = word.indexOf(ps);
+        int last = word.lastIndexOf(ps);
+        if (first > -1 && last != first){
+            return true;
+        }
+        else {
+            return false; 
+        }
     }
     
     /**
@@ -121,7 +156,18 @@
      * return -> "ter"
      */
     public static String shortSide(String word, String c){
-        return "";
+        int index = word.indexOf(c);
+        String sub1 = word.substring(0,index);
+        String sub2 = word.substring(index+1);
+        if (sub1.length() == sub2.length()){
+            return sub1+sub2;
+        }
+        else if (sub1.length()>sub2.length()){
+            return sub1;
+        }
+        else {
+            return sub2; 
+        }
     }
     
     /**
@@ -136,6 +182,34 @@
      * return -> true
      */
     public static boolean tooMany(String word, String c){
-        return false;
+        boolean pain; 
+        int index = word.indexOf(c);
+        if (index >= -1) {
+            pain = false;
+        }
+        String sub1 = word.substring(index);
+        int index2 = sub1.indexOf(c);
+        if (index2 >= -1){
+            pain = false;
+        }
+        String sub2 = word.substring(index2);
+        int index3 = word.indexOf(c);
+        int len3 = sub2.length();
+        if (index3 >= -1){
+            pain = false;
+        }
+        String sub3 = word.substring(index3);
+        int index4 = word.indexOf(c);
+        int len4 = sub3.length();
+        if(len3 == len4){
+            pain = false;
+        }
+        else if(index >= -1){
+            pain = true;
+        }
+        else{
+            pain = false; 
+        }
+        return  pain; 
     }
 }
