@@ -36,5 +36,41 @@ public class MosesRoom extends Robot
      * </ul>
      */
     public void behave(){
-    }
+        //going to left down corner
+      if (!isClearUp() && !isClearLeft() && getData(0) == 0){
+            down();
+        }
+        else if (!isClearUp() && getData(0) == 0){
+            left();
+        }
+        else if (!isClearLeft() && getData(0) == 0){
+            down();
+        }
+      if (!isClearDown() && !isClearRight() && getData(0) == 0){
+            left();
+        }
+        else if (!isClearDown() && getData(0) == 0){
+            left();
+        }
+        else if (!isClearRight() && getData(0) == 0){
+            down();
+        }
+      if (!isClearLeft() && !isClearDown() && getData(0) == 0){
+            setData(0, 1);
+        }
+      if (!isClearLeft() && getData(1) < 5 && getData(0) == 1)
+      {
+          up();
+          setData(1,getData(1)+1);
+        }
+        else if (getData(1) == 5 && isClearRight()){
+            right();
+        }
+        else if (getData(1) == 5 && !isClearRight()){
+            setData(1,0);
+        }
+        else if (getData(1) == 0){
+            left();
+        }
+         }
 }
