@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=FakeConditinals
+comment1.params=argv
+comment1.target=void\ main(java.lang.String[])
+comment2.params=a\ b\ c
+comment2.target=int\ f1(int,\ int,\ int)
+comment3.params=q\ x\ c
+comment3.target=boolean\ f2(int,\ int,\ int)
+comment4.params=word\ c
+comment4.target=boolean\ f3(java.lang.String,\ java.lang.String)
+comment5.params=foR\ teeMo
+comment5.target=java.lang.String\ f4(java.lang.String,\ java.lang.String)
+comment6.params=s2\ s1\ s3
+comment6.target=boolean\ f5(int,\ int,\ int)
+numComments=7

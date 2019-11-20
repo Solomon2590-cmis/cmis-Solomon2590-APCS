@@ -205,4 +205,7 @@ public static boolean tooMany(String word, String c){
     }
     return pain;
 }
+public static int randNum(){
+    return (int)(Math.random()*12);
+}
 }
