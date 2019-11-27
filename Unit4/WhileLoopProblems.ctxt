@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=WhileLoopProblems
+comment0.text=\n\ Write\ a\ description\ of\ class\ WhileLoopProblems\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ squareTable()
+comment2.params=num
+comment2.target=int\ triangleNumber(int)
+comment3.params=num
+comment3.target=int\ pyramid(int)
+comment4.params=
+comment4.target=void\ hi()
+numComments=5
