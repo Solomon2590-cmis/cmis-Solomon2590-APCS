@@ -62,6 +62,9 @@ public class WhileLoopProblems
     public static void checkerboard(int h, int w){
      int realww = 1;
      String dash = "";
+     int randNum = (int)(Math.random()*10);
+     int randX = (int)(Math.random()*(w));
+     int randY = (int)(Math.random()*(h));
      while (realww <= w){
          dash += "-";
          realww++;
@@ -72,32 +75,47 @@ public class WhileLoopProblems
      int realw = 0;
      String out = "";
      String rightleft;
+     double randGoStop = 0;
      while (realh < h){
           space = "";
           realw = 0;
-        }
      while (realw < w){
-         if (realh % 2 == 0 && realw%2 == 0){
-          space += "#";
-          realw += 1;
+          if (realh % 2 == 0 && realw%2 == 0){
+                  if(randX == realw && randY == realh){
+                     space += randNum; 
+                     realw +=1;
+                    }
+                   else{
+                  space += "#";
+                  realw += 1;
+                }
+                }
+          else if (realh % 2 == 0 && realw%2 == 1){
+                  space += " ";
+                  realw += 1;
+                }
+          else if (realh % 2 == 1 && realw%2 == 0){
+                  space += " ";
+                  realw += 1;
+                  
+                }
+          else if (realh % 2 == 1 && realw%2 == 1){
+                  if(randX == realw && randY == realh){
+                     space += randNum;
+                     realw += 1;
+                     }
+                  else{
+                      space += "#";
+                      realw += 1;
+                }
+            }
+          rightleft = "|"+space+"|"+"\n";
+          realh++;
+          out += rightleft;
         }
-        else if (realh % 2 == 0 && realw%2 == 1){
-          space += " ";
-          realw += 1;
-        }
-        else if (realh % 2 == 1 && realw%2 == 0){
-          space += " ";
-          realw += 1;
-        }
-        else if (realh % 2 == 1 && realw%2 == 1){
-          space += "#";
-          realw += 1;
-        }
-        realh += 1  ;
-        rightleft = "|"+space+"|"+"\n";
-        out += rightleft;
-      }
      String addup = updown + out + updown;
      System.out.print(addup); 
-    }
+    
+}
+}
 }
