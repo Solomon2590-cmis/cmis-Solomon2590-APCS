@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class WhileLoopProblems here.
  *
@@ -63,8 +62,34 @@ public class WhileLoopProblems
      int realww = 1;
      String dash = "";
      int randNum = (int)(Math.random()*10);
-     int randX = (int)(Math.random()*(w));
+     int randX = (int)(Math.random()*(w)); 
      int randY = (int)(Math.random()*(h));
+     System.out.println(randX);
+     System.out.println(randY);
+     if ((randY % 2 == 0 && randX % 2 == 1)&& randX ==w){
+         randX -= 1;
+        }
+        
+     else if ((randY % 2 == 0 && randX % 2 == 1)&& randX <= 0){
+         randX += 1;
+        }
+     else if (randY % 2 == 0 && randX % 2 == 1){
+         if(Math.random()>=0.5){
+             randX += 1;
+            }
+         else {
+             randX -= 1;
+            }
+        }
+     else if (randY % 2 == 1 && randX %2 == 0){
+         if(Math.random()>=0.5){
+             randX += 1;
+            }
+         else {
+             randX -= 1;
+            }
+        }
+
      while (realww <= w){
          dash += "-";
          realww++;
@@ -75,7 +100,6 @@ public class WhileLoopProblems
      int realw = 0;
      String out = "";
      String rightleft;
-     double randGoStop = 0;
      while (realh < h){
           space = "";
           realw = 0;
@@ -91,14 +115,26 @@ public class WhileLoopProblems
                 }
                 }
           else if (realh % 2 == 0 && realw%2 == 1){
+                  if(randX == realw && randY == realh){
+                     space += randNum;
+                     realw += 1;
+                    }
+                   else{
                   space += " ";
                   realw += 1;
                 }
+            }
           else if (realh % 2 == 1 && realw%2 == 0){
+                  if(randX == realw && randY == realh){
+                     space += randNum;
+                     realw += 1;
+                    }
+                   else{
                   space += " ";
                   realw += 1;
-                  
                 }
+            }
+               
           else if (realh % 2 == 1 && realw%2 == 1){
                   if(randX == realw && randY == realh){
                      space += randNum;
@@ -109,13 +145,14 @@ public class WhileLoopProblems
                       realw += 1;
                 }
             }
-          rightleft = "|"+space+"|"+"\n";
-          realh++;
-          out += rightleft;
+
         }
-     String addup = updown + out + updown;
-     System.out.print(addup); 
+        rightleft = "|"+space+"|"+"\n";
+        realh++;
+        out += rightleft;
     
 }
+            String addup = "\n"+updown + out + updown;
+            System.out.print(addup);
 }
 }

@@ -58,6 +58,7 @@ public class MosesRoom extends Robot
       if (!isClearLeft() && !isClearDown() && getData(0) == 0){
             setData(0, 1);
         }
+        //going up 5 and right until face obstacle 
       if (!isClearLeft() && getData(1) < 5 && getData(0) == 1)
       {
           up();
@@ -72,5 +73,6 @@ public class MosesRoom extends Robot
         else if (getData(1) == 0){
             left();
         }
+        
          }
 }
