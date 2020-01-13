@@ -42,14 +42,36 @@ public class ForLoopProblems
 }
 public static String map(int height, int width, String symbols){
     String out = "";
-    int random = ((int)(Math.random() * 10)) % symbols.length();
     for (int heightt = 0; heightt < height; heightt++){
         for (int widthh = 0; widthh < width; widthh++){
-            out += symbols.substring(((int)(Math.random() * 10)) % symbols.length()) + "\t";
+            int ran = ((int)(Math.random() * symbols.length()));
+            out += symbols.substring(ran, ran +1) + "\t";
         }
         out += "\n";
     }
     System.out.println(out);
     return out;
 }
-}
+public static String readMap(int x, int y, String map){
+    String out = "";
+    int height = (int)(Math.random()*10);
+    int width = (int)(Math.random()*10);
+    String symbols = "!@#$";
+    if (x > width && y > height){
+        return "error";
+    }
+    else{
+    for (int heightt = 0; heightt < height; heightt++){
+        for (int widthh = 0; widthh < width; widthh++){
+            int ran = ((int)(Math.random() * symbols.length()));
+            out += symbols.substring(ran, ran +1);
+            if (x == widthh && y == heightt){
+                 String redo = out.substring(out.length());
+            }
+        }
+        out += "\n";
+    }
+        System.out.println(out);
+        return redo;
+    }
+}}
