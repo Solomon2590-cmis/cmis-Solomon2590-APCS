@@ -122,5 +122,57 @@ public static int[] sifthRIght(int[] array, int distance){
     }
     return re;
 }
+public static int[] interleave(int[] array1, int[] array2){
+    int[] re = new int[(array1.length)+(array2.length)];
+    int which = 0;
+    int ar1 = 0;
+    int ar2 = 0;
+    for( int i = 0; i < (array1.length+array2.length); i++){
+        if(which % 2 == 0){
+            if(ar1 >= array1.length){
+                re[i] = array2[ar2];
+                ar2++;
+                which++;
+            }
+            else{
+            re[i] = array1[ar1];
+            ar1++;
+            which++;
+        }
+        }
+        else if(which % 2 == 1){
+            if(ar2 >= array2.length){
+                re[i] = array1[ar1];
+                ar1++;
+                which++;
+            }
+            re[i] = array2[ar2];
+            ar2++;
+            which++;
+        }
+    }
+    return re; 
+}
+public static int[]maxValues(int[] array1, int[] array2){
+    int[] re = new int[Math.max(array1.length,array2.length)];
+    int len1 = 0;
+    int len2 = 0;
+    for(int i = 0; i < Math.max(array1.length,array2.length); i++){
+        if( i > array1.length-1){
+             re[i] =array2[len2];
+             len2++;
+        }
+        else if( i > array2.length-1){
+            re[i] = array1[len1];
+            len1++;
+        }
+        else{
+            re[i] = Math.max(array1[len1],array2[len2]);
+            len1++;
+            len2++;
+        }
+    }
+    return re;
+}
 }
 
