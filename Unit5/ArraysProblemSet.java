@@ -174,5 +174,53 @@ public static int[]maxValues(int[] array1, int[] array2){
     }
     return re;
 }
+public static boolean allUnique(int[] array){
+    boolean re = true;
+    int arynum = 0;
+    int going = 0;
+    for(; arynum < array.length; arynum++){
+        for(; going < arynum; going++){
+            if(array[arynum] == array[going]){
+                re = false;
+            }
+            
+        }
+        going = 0;
+    }
+    return re;
 }
+public static int[] uniqueValues(int[] array){
+    int arynum = 0;
+    int going = 0;
+    int[] unitNum = new int[array.length];
+    int unitNumN = 0;
+    boolean uniqueOrNot = true;
+    int[] re;
+    int sub = 0;
+    for(; arynum< array.length; arynum++){
+        for(; going < array.length; going++){
+            if(array[arynum] == array[going]){
+                if(arynum != going){
+                    uniqueOrNot = false;;
+                }
+            }
+        }
+        if(uniqueOrNot == true){
+            unitNum[unitNumN] = arynum;
+            unitNumN++;
+        }
+        uniqueOrNot = true;
+        going = 0;
+        }
+    re = new int[unitNumN];
+    int which = 0;
+    for(int i = 0; i < unitNumN; i++){
+        re[i] = array[unitNum[which]];
+        which++;
+    
+    }
+    return re;
+    }
+}
+
 
