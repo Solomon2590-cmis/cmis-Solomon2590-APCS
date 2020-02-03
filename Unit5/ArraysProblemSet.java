@@ -197,11 +197,21 @@ public static int[] uniqueValues(int[] array){
     boolean uniqueOrNot = true;
     int[] re;
     int sub = 0;
+    for(;arynum < array.length; arynum++){
+        if( array[arynum] == 0){
+            unitNum[unitNumN] = arynum;
+            unitNumN++;
+            arynum = array.length;
+        }
+    }
     for(; arynum< array.length; arynum++){
         for(; going < array.length; going++){
             if(array[arynum] == array[going]){
                 if(arynum != going){
-                    uniqueOrNot = false;;
+                   array[arynum] = 0;
+                }
+                if(array[arynum] == 0){
+                    uniqueOrNot = false; 
                 }
             }
         }
