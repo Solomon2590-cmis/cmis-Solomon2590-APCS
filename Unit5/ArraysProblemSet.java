@@ -195,34 +195,40 @@ public static int[] uniqueValues(int[] array){
     int[] unitNum = new int[array.length];
     int unitNumN = 0;
     boolean uniqueOrNot = true;
-    int[] re;
     int sub = 0;
+    int first = 0;
     for(;arynum < array.length; arynum++){
-        if( array[arynum] == 0){
+        if( array[arynum] == 0 && first == 0){
             unitNum[unitNumN] = arynum;
             unitNumN++;
             arynum = array.length;
+            first++;
+        }
+        else if( array[arynum] == 0 && first == 1){
+            arynum = array.length;
         }
     }
+    arynum = 0;
     for(; arynum< array.length; arynum++){
         for(; going < array.length; going++){
             if(array[arynum] == array[going]){
                 if(arynum != going){
-                   array[arynum] = 0;
+                   array[going] = 0;
                 }
                 if(array[arynum] == 0){
-                    uniqueOrNot = false; 
+                    uniqueOrNot = false;
                 }
             }
         }
+      
         if(uniqueOrNot == true){
-            unitNum[unitNumN] = arynum;
-            unitNumN++;
+                unitNum[unitNumN] = arynum;
+                unitNumN++;
         }
         uniqueOrNot = true;
         going = 0;
-        }
-    re = new int[unitNumN];
+    }   
+    int[] re = new int[unitNumN];
     int which = 0;
     for(int i = 0; i < unitNumN; i++){
         re[i] = array[unitNum[which]];
@@ -230,6 +236,14 @@ public static int[] uniqueValues(int[] array){
     
     }
     return re;
+    }
+public static int[] randomArray(int length, int min, int max){
+     int[] re = new int[length];
+     int ran = 0;
+     for(int i = 0; i < length; i++){
+         re[i] = ((int)(Math.random()*max-1))+min;
+        }
+        return re;
     }
 }
 
