@@ -233,7 +233,6 @@ public static int[] uniqueValues(int[] array){
     for(int i = 0; i < unitNumN; i++){
         re[i] = array[unitNum[which]];
         which++;
-    
     }
     return re;
     }
@@ -245,22 +244,32 @@ public static int[] randomArray(int length, int min, int max){
         }
         return re;
     }
-public static void bubbleSort(int[] array){
-    int ending = 0;
-    int lastNum = 0; 
-    int index = 0;
-    for(; ending < array.length;){
-        while(index < array.length-1 && array[index] > array[index+1] ){
-            lastNum = array[index+1];
-            array[index+1] = array[index];
-            array[index] = lastNum;
-            index++;
+    public static void bubbleSort(int[] array){
+        int[] result = new int[array.length];
+        int box;
+        for(int i = 0; i < array.length; i++){
+            int idx = 0;
+            for(; idx < array.length -1; idx++){
+                if (array[idx] > array[idx+1]){
+                    box = array[idx];
+                    array[idx] = array[idx+1];
+                    array[idx+1] = box;
+                }
+                result[idx] = array[idx];
+                result[idx+1] = array[idx+1];
+            }  
         }
-        ending++;
-        index = 0;
-    }
-    System.out.println(array);
+        ArraysProblemSet.out(array);
 } 
+public static String out(int[] array){
+        String ii = "";
+        for(int i = 0; i < array.length; i++){
+            ii += array[i]+",";
+        }
+        System.out.println(ii);
+        return ii;
+}
+public static int linearSearch
 }
 
 
