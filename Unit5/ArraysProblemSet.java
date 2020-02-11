@@ -259,7 +259,6 @@ public static int[] randomArray(int length, int min, int max){
                 result[idx+1] = array[idx+1];
             }  
         }
-        ArraysProblemSet.out(array);
 } 
 public static String out(int[] array){
         String ii = "";
@@ -269,7 +268,47 @@ public static String out(int[] array){
         System.out.println(ii);
         return ii;
 }
-public static int linearSearch
+public static int linearSearch(int[] haystack, int needle){
+    int re = -1;
+    for(int i = 0; i < haystack.length; i++){
+        if(haystack[i] == needle){
+            re = i;
+            i = haystack.length;
+        }
+    }
+    return re; 
 }
-
-
+public static int binarySearch(int[] haystack, int needle){
+    ArraysProblemSet.bubbleSort(haystack);
+    int compareInt = (haystack.length-1)/2;
+    int re = -1;
+    int length = haystack.length-1;
+    System.out.print(compareInt);
+    while(length != 1){
+        int[] newArray = new int[compareInt+1];
+        if(haystack[compareInt] == needle || newArray[compareInt] == needle){
+                re = compareInt;
+                length = 1;
+            }
+        else if(haystack[compareInt] > needle || newArray[compareInt] > needle){
+            for(int i = 0; i < newArray.length; i++){
+                newArray[i] = haystack[i];
+                }
+            length = newArray.length;
+            compareInt = (newArray.length-1)/2;
+        }
+        
+        else if(haystack[compareInt] < needle || newArray[compareInt] < needle){
+            int goingBack = newArray.length-1;
+               for(int i = 0; i < newArray.length; i++){
+                newArray[i] = haystack[goingBack];
+                goingBack--;
+            }
+            length = newArray.length;
+            compareInt = (newArray.length-1)/2;
+        }
+        }
+    
+    return re;
+}
+}
