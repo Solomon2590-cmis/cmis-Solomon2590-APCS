@@ -2,12 +2,13 @@ import java.util.*;
 public class ArrayListProblem
 {
      public static void main(String[] argv){
-         System.out.println(getOdds(integerList(5)));
+         insertAvgs(integerList(6.0));
+         System.out.println(integerList(6.0));
     }
     
-    public static List<Integer> integerList(int len){
-        List<Integer> al = new ArrayList<Integer>(len);
-        for(int i = 0; i < len; i ++){
+    public static ArrayList<Double> integerList(double len){
+        ArrayList<Double> al = new ArrayList<Double>((int)len);
+        for(Double i = 0.0; i < len; i ++){
             al.add(i);
         }
         return al;
@@ -25,15 +26,20 @@ public class ArrayListProblem
         return re;
     }
     
-    public static void insertAvgs(List<Double> al){
+    public static ArrayList<Double> insertAvgs(ArrayList<Double> al){
         int len = al.size();
-        for(int i = 0; i < len; i++){
+        for(int idx = 0; idx < 2*len -2;idx+=2){
+                al.add(idx+1,(al.get(idx) + al.get(idx+1))/2);
+        }
+        return al;
+    }
+
+    public static List<String> chopper(List<String> words){
+        List<String> re = new ArrayList<String>();
+        String in = "";
+        for(int i = 0; i < words.size(); i++){
             
         }
     }
-    
-    //public static List<String> chopper(List<String> words){
-
-    //}
 
     }
