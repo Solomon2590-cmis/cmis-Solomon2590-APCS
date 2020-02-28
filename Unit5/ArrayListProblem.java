@@ -37,9 +37,18 @@ public class ArrayListProblem
     public static List<String> chopper(List<String> words){
         List<String> re = new ArrayList<String>();
         String in = "";
+        int len;
         for(int i = 0; i < words.size(); i++){
-            
+            if(i+1 == words.size()){
+                len =(words.get(i)).length();
+                re.add(i,(re.get(i).substring(0,len/2))+(re.get(0).substring(len/2,len)));
+            }
+            else{
+                len =(words.get(i)).length();
+                re.add(i,(re.get(i).substring(0,len/2))+(re.get(i+1).substring(len/2,len)));
+            }
         }
+        return re;
     }
 
     }

@@ -8,4 +8,6 @@ comment3.params=al
 comment3.target=java.util.List\ getOdds(java.util.List)
 comment4.params=al
 comment4.target=java.util.ArrayList\ insertAvgs(java.util.ArrayList)
-numComments=5
+comment5.params=words
+comment5.target=java.util.List\ chopper(java.util.List)
+numComments=6
