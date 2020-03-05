@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=GameOfLife
-comment0.text=\n\ Write\ a\ description\ of\ class\ GameOfLife\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=GameOfLife()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ GameOfLife\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
-numComments=3
+comment1.params=argv
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Game\ Of\ Life\ Rules\n\ 1.\ Any\ live\ cell\ with\ fewer\ than\ two\ live\ neighbours\ dies,\ as\ if\ caused\ by\ under-population.\n\ 2.\ Any\ live\ cell\ with\ two\ or\ three\ live\ neighbours\ lives\ on\ to\ the\ next\ generation.\n\ 3.\ Any\ live\ cell\ with\ more\ than\ three\ live\ neighbours\ dies,\ as\ if\ by\ over-population.\n\ 4.\ Any\ dead\ cell\ with\ exactly\ three\ live\ neighbours\ becomes\ a\ live\ cell,\ as\ if\ by\ reproduction.\n
+comment2.params=board
+comment2.target=java.lang.String\ printNextGen(int[][])
+comment3.params=board\ col\ row\ near
+comment3.target=int\ nearl(int[][],\ int,\ int,\ int)
+comment4.params=board
+comment4.target=int[][]\ nextGeneration(int[][])
+numComments=5
